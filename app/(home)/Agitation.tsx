@@ -1,18 +1,41 @@
-import React from "react";
+import {
+  Body,
+  Heading,
+  InnerWrap,
+  Preheading,
+  SubHeading,
+  Wrapper,
+} from "@/lib/atoms";
 import tw from "tailwind-styled-components";
-import { Body, Heading, InnerWrap, Preheading, Wrapper } from "@/lib/atoms";
 import herobg from "../../public/img/hero.webp";
+import StoriesSlider from "./storiesslider";
+import { Titles } from "../(shared)/Titles";
 
 type Props = {};
 
 const contentSections = [
   {
     title: "Product",
-    text: "Fractional CTOs should not only deliver product, but product-market-fit. You need someone on your team with experience in not just planning, but bringing products to market.",
+    text: (
+      <>
+        Fractional CTOs should not only deliver product, but product-market-fit.
+        You need someone on your team with experience in figuring out what your
+        customers will pay for, and{" "}
+        <span className="font-semibold text-brand-base-a">then</span> build it.
+      </>
+    ),
   },
   {
     title: "People",
-    text: "Hiring the right people is critical to the success of your startup especially in in seed-stage. I will help you build a lean technical team that is aligned with your vision and values.",
+    text: (
+      <>
+        Hiring the right people at the right time is critical to the success of
+        your startup especially in in seed-stage. An fCTO helps keep costs low
+        by balancing offshore talent while building{" "}
+        <span className="font-semibold text-brand-base-a">lean</span> internal
+        teams.
+      </>
+    ),
   },
   {
     title: "Pitch",
@@ -28,30 +51,24 @@ const contentSections = [
   },
 ];
 
-const Left = tw.div`lg:w-1/2 aspect-[3/4] bg-brand-base-c text-brand-base-h items-end justify-end flex-col p-10 overflow-hidden h-full `;
+const Left = tw.div`lg:w-1/2 aspect-[3/4] bg-brand-base-c2 text-brand-base-h items-end justify-end flex-col overflow-hidden h-full `;
 const Right = tw.div`relative lg:w-1/2 aspect-square bg-white overflow-hidden mt-4 lg:mt-0`;
 
 export default function Agitation({}: Props) {
+  const titleContent = {
+    preheading: "problem",
+    heading: "Many startups fail before they reach Product-Market-Fit",
+    subheading:
+      "Non-technical founders risk making poor decisions early on with product journey, hiring and budgeting.",
+  };
+
   return (
     <Wrapper className="text-gray-200 bg-brand-base-f">
       <InnerWrap>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
-            <div className="flex flex-col items-center justify-center gap-3">
-              <Preheading className="mb-8 font-light tracking-[0.3em] text-brand-base-a">
-                problem
-              </Preheading>
-              <Heading className="max-w-4xl font-normal">
-                80<span className="font-normal font-body">%</span> of startups
-                fail before they reach Product-Market-Fit.
-              </Heading>
-              <Body>
-                If you&apos;re a non-technical founding team that lacks
-                technical expertise you risk making poor decisions early on with
-                your product journey.
-              </Body>
-            </div>
-            <div className="grid items-start gap-8 mx-auto mt-4 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 font-body">
+            <Titles content={titleContent} theme="dark" />
+            <div className="grid items-start gap-12 mx-auto mt-4 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 font-body">
               {contentSections.map((section) => (
                 <div
                   className="flex flex-col items-start gap-1"
@@ -68,27 +85,9 @@ export default function Agitation({}: Props) {
             </div>
           </div>
         </section>
-        <section className="gap-4 pt-10 lg:flex max-w-7xl py-[8vh] relative">
+        <section className="gap-4 pt-10 md:flex max-w-7xl py-[8vh] relative hidden">
           <Left>
-            <div className="flex flex-col items-start justify-center h-full p-12 px-16 mt-auto">
-              <h1 className="text-4xl font-medium tracking-tight font-title">
-                Don&apos;t let your dream <br />
-                die in the dark.
-              </h1>
-              <p className="pt-6 text-lg font-light font-body text-brand-base-g">
-                <span className="font-medium text-brand-base-a">
-                  Building product is hard
-                </span>
-                . There&apos;s a myriad of gotchas, assumptions, bad advice &
-                missteps that await you if you don&apos;t come from a technical
-                background. Your idea is great, but to make it a reality, you
-                need a killer team.
-              </p>
-              <p className="pt-6 font-light text-md font-body text-brand-base-g">
-                Hiring a Fractional CTO (fCTO) lays the right product foundatin
-                from the start.
-              </p>
-            </div>
+            <StoriesSlider />
           </Left>
           <Right>
             <div
@@ -103,42 +102,8 @@ export default function Agitation({}: Props) {
                 justifyContent: "center",
               }}
             >
-              <div className="absolute text-lg bottom-12 left-12 bg-none font-body">
+              <div className="absolute hidden text-lg bottom-12 left-12 bg-none font-body">
                 Title
-              </div>
-              <div className="absolute flex space-x-4 bottom-12 right-12">
-                <div className="p-2 bg-white rounded-full cursor-pointer bg-opacity-20 hover:bg-opacity-40">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="w-6 h-6 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
-                </div>
-                <div className="p-2 bg-white rounded-full cursor-pointer bg-opacity-20 hover:bg-opacity-40">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="w-6 h-6 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
               </div>
             </div>
           </Right>

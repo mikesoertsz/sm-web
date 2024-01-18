@@ -72,25 +72,25 @@ export const footer = {
   text: {
     title: "startupmike.com.",
     subtitle: "Feactional CTO based in Portugal",
-    description: "",
+    description: "A Drifter Apps project.",
     trademark: "All rights reserved.",
   },
   links: [
     {
       text: "Terms",
-      url: "/terms",
+      url: "/legal/terms",
     },
     {
       text: "Refunds",
-      url: "/refunds",
+      url: "/legal/refunds",
     },
     {
       text: "Privacy",
-      url: "/privacy",
+      url: "/legal/privacy",
     },
     {
       text: "GDPR",
-      url: "/gdpr",
+      url: "/legal/gdpr",
     },
   ],
 };
@@ -570,6 +570,34 @@ export const homepage = {
     heading: "Let's work together",
     subheading: "Email or book a free consultation",
     description: "",
+  },
+  attention: {
+    hero: {
+      header: {
+        icon: "",
+        image: "",
+        preheading: "Understanding Your Challenges",
+        heading: "Automate your restaurant.",
+        subheading: "AI-automated restaurant systems are here.",
+        body: "Managing restaurants has never been easy. Until now. We help you automate your restaurant operations, from hiring to inventory management, so you can focus on what you do best.",
+        body2: "",
+        cta: [
+          {
+            ctatext: "Learn More",
+            ctaurl: "/learnmore",
+          },
+          {
+            ctatext: "Learn More",
+            ctaurl: "/learnmore",
+          },
+        ],
+      },
+    },
+    stinger: {
+      badge: "Jan 2024",
+      heading: "20% off all projects in Q1-24   🎉",
+      url: "/booking",
+    },
   },
   desire: {
     aboutus: {

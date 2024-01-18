@@ -22,26 +22,31 @@ export type TitleHeader = {
 
 // AIDA framework Landing page content
 export type Attention = {
-  hero: {
-    header: TitleC;
-    buttons: {
-      primary: {
-        text: string;
-        url: string;
-      };
-      secondary: {
-        text: string;
-        url: string;
-      };
-    };
+  // hero: {
+  //   header: TitleC;
+  //   buttons: {
+  //     primary: {
+  //       text: string;
+  //       url: string;
+  //     };
+  //     secondary: {
+  //       text: string;
+  //       url: string;
+  //     };
+  //   };
+  // };
+  stinger: {
+    badge?: string;
+    heading?: string;
+    url?: string;
   };
-  breadcrumbs: {
-    label: string;
-    href: string;
-    color?: string;
-  }[];
-  valueprop: any; // Needs further specification
-  trustbadges: any[]; // Needs further specification
+  // breadcrumbs: {
+  //   label: string;
+  //   href: string;
+  //   color?: string;
+  // }[];
+  // valueprop: any; // Needs further specification
+  // trustbadges: any[]; // Needs further specification
 };
 
 export type Interest = {

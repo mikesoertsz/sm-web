@@ -12,8 +12,8 @@ import tw from "tailwind-styled-components";
 
 type Props = {};
 
-const GridWrap = tw.div`grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3 pt-4`;
-const Column = tw.div`flex font-body w-full bg-white p-16 flex-col bg-gray-50 aspect-square`;
+const GridWrap = tw.div`grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3 pt-4 h-full`;
+const Column = tw.div`flex font-body w-full bg-white p-8 md:p-16 flex-col bg-gray-50 aspect-square grow`;
 const ColumnTitle = tw.h2`my-1 text-lg font-medium tracking-tight text-black`;
 const ColumnDescription = tw.h4`text-black text-sm h-full flex-grow`;
 
@@ -26,9 +26,9 @@ export default function Expertise({}: Props) {
             what i do
           </Preheading>
           <Heading className="max-w-4xl">Expertise</Heading>
-          <Body className="text-brand-base-e">
+          <SubHeading className="mb-4 text-2xl text-brand-base-e">
             I help non-technical teams build great products that people love.
-          </Body>
+          </SubHeading>
         </div>
         <GridWrap>
           {content.map((item, index) => (
@@ -37,7 +37,7 @@ export default function Expertise({}: Props) {
                 <ColumnTitle>{item.title}</ColumnTitle>
                 <ColumnDescription>{item.description}</ColumnDescription>
               </div>
-              <ul className="mt-6">
+              <ul className="flex flex-col mt-6 grow">
                 {item.list.map((listItem, index) => (
                   <li
                     key={index}
@@ -68,25 +68,47 @@ const content = [
       "Technical Strategy",
       "Product Roadmap",
       "Hiring Strategy",
+      "Product-Market Fit",
+      "Product Budgeting",
+      "Product Launch",
+      "Fundraising",
+      "Investor Relations",
     ],
   },
   {
     icon: "",
     title: "Design",
     description:
-      "As a consultant, I provide guidance for teams lacking technical leadership.",
-    list: ["Wireframing"],
+      "I design products that are beautiful, usable, and accessible. I'm not constrained by templates or themes. I work for the user.",
+    list: [
+      "Wireframing",
+      "Prototyping",
+      "User Testing",
+      "UI/UX Design",
+      "Branding",
+      "Design Systems",
+      "Graphic Design",
+      "AI Imagery",
+      "Video Production",
+      "3D Design & Rendering",
+    ],
   },
   {
     icon: "",
     title: "Development",
     description:
-      "I train technical teams to build products, enhancing their skills and productivity.",
+      "I train technical teams to build modern, exceptional products. Products that 'just work', built to scale, and not just satisfy, but delight users.",
     list: [
       "Web Application Development",
-      "Technical Team Building",
+      "Mobile Application Development",
+      "API Development",
+      "Database Development",
+      "Cloud Infrastructure",
+      "Technical Architecture",
+      "Technical Documentation",
+      "Technical Team Hiring",
       "Agile Process",
-      "Infrastructure",
+      "DevOps Infrastructure",
     ],
   },
   // {

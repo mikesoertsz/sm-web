@@ -5,12 +5,14 @@ import { IoLogoTwitter, IoMdShuffle } from "react-icons/io";
 import tw from "tailwind-styled-components";
 import { BsSubstack } from "react-icons/bs";
 import { Button } from "@/components/ui/button";
+import Mikefactsshuffle from "./mikefactsshuffle";
 
 type Props = {};
 
 const SplitWrap = tw.div`grid grid-cols-1 lg:grid-cols-2 gap-4 w-full mt-12`;
-const Left = tw.div`min-h-[400px] aspect-[4/3] items-center justify-between flex p-8 bg-gray-50 bg-brand-base-f flex-col`;
-const Right = tw.div`min-h-[400px] aspect-[4/3] items-center justify-center flex p-8 bg-gray-50`;
+const Left = tw.div`min-h-[60vh] items-center justify-center flex p-8 bg-gray-50 bg-brand-base-f flex-col bg-[url('/img/bgpattern.jpg')] bg-blend-overlay bg-auto bg-no-repeat bg-cover h-full`;
+
+const Right = tw.div`min-h-[60vh] items-center justify-between flex p-8 bg-gray-50`;
 const Footer = tw.div`flex flex-col items-center justify-start`;
 
 export default function AboutMike({}: Props) {
@@ -24,68 +26,39 @@ export default function AboutMike({}: Props) {
           <Image
             src="/img/mike.png"
             alt="Mike Soertsz"
-            className="rounded-full"
+            className="border-8 rounded-full border-brand-base-i"
             width={150}
             height={150}
           />
           <Heading className="max-w-4xl mt-6 font-normal text-center">
-            Hi, I&apos;m Mike
+            Startup Mike
           </Heading>
           <Body className="text-center text-brand-base-e">
             I&apos;ve been building products since I was 12. From text-based
-            games to complete cloud platforms with my own companies. Now I help
-            startups find PMF and escape the Build Trap.
+            games to complete cloud platforms to my own bootstrapped companies.
+            I help startups like yours find PMF and escape the Build Trap.
           </Body>
         </div>
         <SplitWrap>
           <Left>
-            <Preheading className="font-light tracking-wider uppercase text-brand-base-b">
-              Random Mike Fact Generator
-            </Preheading>
-            <div className="flex flex-col items-center justify-center text-white font-body">
-              <div>{/* shuffle content goes here */}</div>
-              <Button className="gap-2 font-body" variant="secondary">
-                <IoMdShuffle size={12} />
-                Shuffle
-              </Button>
-            </div>
-            <Footer className="text-brand-base-a font-body">
-              <h4>Mike Soertsz</h4>
-              <p className="mb-2 text-sm text-brand-base-g">
-                Fractional CTO / Full-Stack Developer / Investor
-              </p>
-              <ul className="flex gap-2 text-white">
-                <li>
-                  <FaLinkedinIn />
-                </li>
-                <li>
-                  <IoLogoTwitter />
-                </li>
-                <li>
-                  <FaMediumM />
-                </li>
-                <li>
-                  <BsSubstack />
-                </li>
-              </ul>
-            </Footer>
+            <Mikefactsshuffle />
           </Left>
           <Right>
-            <div className="flex flex-col px-12">
-              <Preheading className="mb-8 font-light tracking-[0.3em] text-brand-base-f">
+            <div className="flex flex-col gap-4 lg:px-12">
+              <Preheading className=" font-light tracking-[0.3em] text-brand-base-f">
                 background
               </Preheading>
               <ul className="flex flex-col gap-2 text-sm font-body">
                 <li>
                   <p>
-                    Based in Portugal with over 20 years in design, development
+                    Based in Portugal with over 25 years in design, development
                     and entrepreneurship.
                   </p>
                 </li>
                 <li>
                   <p>
                     I work with early stage startups as a tech advisor, leader,
-                    or full-stack product manager and developer.
+                    or full-stack product manager & developer.
                   </p>
                 </li>
                 <li>
@@ -113,6 +86,26 @@ export default function AboutMike({}: Props) {
                   </p>
                 </li>
               </ul>
+              <Footer className="flex items-start justify-start mt-4 text-brand-base-c3 font-body">
+                <h4>Mike Soertsz</h4>
+                <p className="text-sm text-brand-base-c">
+                  Fractional CTO / Full-Stack Developer / Investor
+                </p>
+                <ul className="flex gap-2 mt-6 text-gray-500 ">
+                  <li>
+                    <FaLinkedinIn className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                  </li>
+                  <li>
+                    <IoLogoTwitter className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                  </li>
+                  <li>
+                    <FaMediumM className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                  </li>
+                  <li>
+                    <BsSubstack className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                  </li>
+                </ul>
+              </Footer>
             </div>
           </Right>
         </SplitWrap>
@@ -120,15 +113,3 @@ export default function AboutMike({}: Props) {
     </Wrapper>
   );
 }
-
-const mikeFacts = [
-  "Codes in over 14 languages.",
-  "Pro in 30 design software.",
-  "Based in Porto, Portugal.",
-  "Has lived in 15 cities.",
-  "Has 3 dogs.",
-  "Loves sailing.",
-  "Is a carpenter.",
-  "Is a chef.",
-  "",
-];

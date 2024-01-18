@@ -3,54 +3,78 @@
 import { TitleHeader } from "@/lib/types";
 import Image from "next/image";
 import React from "react";
-import tw from "tailwind-styled-components";
+import { cva, type VariantProps } from "class-variance-authority";
+import { ClassProp } from "class-variance-authority/types";
 
-export function Titles({ content }: TitleHeader) {
-  const Wrapper = tw.div`flex flex-col text-center items-center justify-center mx-auto py-12`;
-  const Icon = tw.div`flex mx-auto items-center justify-center py-4`;
-  const ImageWrap = tw.div`relative w-10 h-10 py-4`;
-  const Preheading = tw.h4`text-xs mb-2 uppercase tracking-widest font-body`;
-  const Heading = tw.h1`text-3xl md:text-4xl lg:text-5xl py-3 font-title`;
-  const SubHeading = tw.h2`text-3xl font-light tracking-tight font-body`;
-  const Body = tw.p`mt-3 max-w-3xl mx-auto text-sm md:text-md font-body`;
+type ThemeType = "light" | "dark";
 
-  return (
-    <Wrapper>
-      {content?.icon && <Icon>{content.icon}</Icon>}
-      {content?.image && (
-        <ImageWrap>
-          <Image src={content.image} alt="" fill />
-        </ImageWrap>
-      )}
-      {content?.preheading && <Preheading>{content.preheading}</Preheading>}
-      {content?.heading && <Heading>{content.heading}</Heading>}
-      {content?.subheading && <SubHeading>{content.subheading}</SubHeading>}
-      {content?.body && <Body>{content.body}</Body>}
-    </Wrapper>
-  );
+const titleVariants = cva([
+  [
+    "flex",
+    "flex-col",
+    "items-center",
+    "justify-center",
+    "mx-auto",
+    "text-center",
+  ],
+  {
+    // Variants
+    variants: {
+      theme: {
+        light: "text-brand-base-c2",
+        dark: "text-brand-base-a",
+      },
+    },
+    defaultVariants: {
+      theme: "light",
+    },
+  },
+]);
+
+export interface TitleProps extends VariantProps<typeof titleVariants> {
+  content: TitleHeader["content"];
+  theme?: ThemeType;
 }
 
-export function TitlesLeft({ content }: TitleHeader) {
-  const Wrapper = tw.div`flex flex-col text-center items-start justify-start text-left max-w-prose`;
-  const Icon = tw.div`flex items-start justify-start`;
-  const ImageWrap = tw.div`relative w-10 h-10 py-4`;
-  const Preheading = tw.h4`text-sm font-semibold mb-3`;
-  const Heading = tw.h1`text-3xl font-bold sm:text-4xl sm:tracking-tight font-title`;
-  const SubHeading = tw.h2`text-3xl font-semibold tracking-tight`;
-  const Body = tw.p`mt-3 max-w-prose text-md text-gray-800 leading-relaxed font-body`;
+export function Titles({ content, theme = "light" }: TitleProps) {
+  const themeClass = titleVariants({ theme } as ClassProp);
+  const preheadingClass =
+    theme === "light" ? "text-brand-base-c2" : "text-brand-base-a";
 
   return (
-    <Wrapper>
-      {content?.icon && <Icon>{content.icon}</Icon>}
-      {content?.image && (
-        <ImageWrap>
-          <Image src={content.image} alt="" fill />
-        </ImageWrap>
+    <div className={themeClass}>
+      {content?.icon && (
+        <div className="flex items-center justify-center py-4 mx-auto">
+          {content.icon}
+        </div>
       )}
-      {content?.preheading && <Preheading>{content.preheading}</Preheading>}
-      {content?.heading && <Heading>{content.heading}</Heading>}
-      {content?.subheading && <SubHeading>{content.subheading}</SubHeading>}
-      {content?.body && <Body>{content.body}</Body>}
-    </Wrapper>
+      {content?.image && (
+        <div className="relative w-10 h-10 py-4">
+          <Image src={content.image} alt="" layout="fill" />
+        </div>
+      )}
+      {content?.preheading && (
+        <h4
+          className={`sm:text-sm md:text-md uppercase font-light tracking-[0.5em] max-w-3xl mb-12 font-body ${preheadingClass}`}
+        >
+          {content.preheading}
+        </h4>
+      )}
+      {content?.heading && (
+        <h1 className="max-w-4xl mb-4 text-5xl md:text-5xl lg:text-6xl lg:max-w-5xl">
+          {content.heading}
+        </h1>
+      )}
+      {content?.subheading && (
+        <h2 className="max-w-4xl my-4 text-2xl font-light tracking-tight font-body">
+          {content.subheading}
+        </h2>
+      )}
+      {content?.body && (
+        <p className="max-w-3xl mx-auto mt-3 text-sm leading-relaxed md:text-lg font-body text-brand-base-i">
+          {content.body}
+        </p>
+      )}
+    </div>
   );
 }

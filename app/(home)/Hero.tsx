@@ -4,25 +4,36 @@ import Image from "next/image";
 import React from "react";
 import { BiLogoZoom } from "react-icons/bi";
 import tw from "tailwind-styled-components";
+import Stinger from "./Stinger";
+import { Attention } from "@/lib/types";
 
 type Props = {};
 
-
-
-export default function Hero({}: Props) {
+export default function Hero(attention: Attention) {
   return (
     <Wrapper className="py-[10vh] bg-brand-base-h">
-      <InnerWrap className="flex-col gap-4 pt-10 lg:flex">
-        <h1 className="max-w-5xl tracking-tight text-8xl font-title text-brand-base-f">
+      <InnerWrap className="flex-col items-center justify-center gap-4 pt-10 lg:flex min-h-[80vh]">
+        <Stinger {...attention} />
+        <h1 className="text-center text-7xl text-tracking-tight lg:max-w-5xl font-title text-brand-base-f">
           Technical leadership for early-stage startups.
         </h1>
-        <div className="flex gap-2 mt-6">
-          <Button size="lg" className="font-body">
+        <ul className="hidden gap-4 my-8 text-sm font-body">
+          <li>Fractional CTO</li>
+          <li>Full-Stack Developer</li>
+          <li>Angel</li>
+        </ul>
+        <div className="flex items-center justify-center gap-2 mt-6">
+          <Button size="lg" className="hidden font-body">
             What is an fCTO?
           </Button>
           <Button size="lg" variant="outline" className="gap-2 font-body">
-            <BiLogoZoom size={25} className="text-gray-600" />
-            Book your free call
+            <a
+              href="https://calendly.com/drifterapps/discovery30m"
+              className="flex items-center justify-center gap-2"
+            >
+              <BiLogoZoom size={25} className="text-gray-600" />
+              Book a consultation
+            </a>
           </Button>
         </div>
       </InnerWrap>

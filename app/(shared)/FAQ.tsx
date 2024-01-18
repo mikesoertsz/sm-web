@@ -33,14 +33,14 @@ export default function Faq({ faq }: Desire) {
             </Body>
           </Left>
           <Right>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full mt-4">
               {faq.questions.map((item, index) => (
                 <AccordionItem
                   key={index}
                   value={item.value}
                   className="border-0"
                 >
-                  <AccordionTrigger className="text-sm font-medium tracking-tight text-left border-0 md:text-lg font-body hover:text-brand-base-a text-brand-base-g">
+                  <AccordionTrigger className="font-medium tracking-tight text-left border-0 text-md md:text-lg font-body hover:text-brand-base-a text-brand-base-g">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="px-4 tracking-tight border-0 text-md md:text-lg max-w-prose font-body">

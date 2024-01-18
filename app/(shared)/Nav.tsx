@@ -44,7 +44,7 @@ export default function Nav({ content }: Props) {
       <Left>
         <Sheet>
           <SheetTrigger asChild className="sm:hidden">
-            <Button className="p-1 px-2 aspect-square bg-slate-200 hover:bg-slate-300">
+            <Button className="hidden p-1 px-2 aspect-square bg-slate-200 hover:bg-slate-300">
               <RxHamburgerMenu size={30} className="text-gray-600" />
             </Button>
           </SheetTrigger>
@@ -58,8 +58,8 @@ export default function Nav({ content }: Props) {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-        <h4 className="pl-8 text-xl font-medium">
-          <span className="font-medium tracking-tighter text-brand-base-b">
+        <h4 className="pl-4 text-xl font-medium">
+          <span className="font-medium tracking-tighter text-brand-base-i">
             startup
           </span>
           <span className="font-title">mike</span>
@@ -68,7 +68,7 @@ export default function Nav({ content }: Props) {
       </Left>
       <Mid></Mid>
       <Right>
-        <ul className="flex-row items-center justify-center hidden gap-4 pl-10 sm:flex ">
+        {/* <ul className="flex-row items-center justify-center hidden gap-4 pl-10 sm:flex">
           {content.links?.map((link, index: number) => (
             <li key={index}>
               <Link
@@ -79,13 +79,18 @@ export default function Nav({ content }: Props) {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
         <Link
           href="/forvcs"
           className="hidden font-semibold transition duration-300 ease-in-out rounded-md hover:text-gray-200 "
         >
           For Angels & VCs
         </Link>
+        <Button variant="default">
+          <a href="https://calendly.com/drifterapps/discovery30m">
+            Book a consultation
+          </a>
+        </Button>
       </Right>
     </NavWrap>
   );

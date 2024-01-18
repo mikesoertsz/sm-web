@@ -11,11 +11,11 @@ export default function Testimonial({}: Props) {
   return (
     <Wrapper className="bg-brand-base-f text-gray-200 py-[5vh]">
       <InnerWrap className="flex items-center justify-center">
-        <div className="max-w-md p-6 text-white">
+        <div className="max-w-lg p-6 text-white">
           <blockquote className="relative text-lg tracking-wide font-body text-brand-base-h">
             <FaQuoteLeft className="absolute -top-8 -left-0 text-[#6ee7b7] text-2xl " />
-            Mike was invaluable in not just the product development, but in
-            setting up our cloud infrastructure for robotic food operations.
+            Mike was invaluable in not just the UI/UX design & development, but
+            in setting up our cloud infrastructure for robotic food operations.
           </blockquote>
           <div className="flex items-center mt-10">
             <Avatar className="w-12 h-12 mr-3">
