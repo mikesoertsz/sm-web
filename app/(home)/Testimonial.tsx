@@ -35,7 +35,7 @@ export default function Testimonial({}: Props) {
               </span>
               <Link
                 href=""
-                className="flex items-center justify-center mt-4 text-sm duration-100 ease-in-out text-brand-base-b group font-body hover:text-brand-base-a"
+                className="items-center justify-center hidden mt-4 text-sm duration-100 ease-in-out  text-brand-base-b group font-body hover:text-brand-base-a"
               >
                 Read about ClassBubs
                 <FaCaretRight
