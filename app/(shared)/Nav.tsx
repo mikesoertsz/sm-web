@@ -87,7 +87,7 @@ export default function Nav({ content }: Props) {
           For Angels & VCs
         </Link>
         <Button variant="default">
-          <a href="https://calendly.com/drifterapps/discovery30m">
+          <a href="https://calendly.com/startupmike/discovery">
             Book a consultation
           </a>
         </Button>

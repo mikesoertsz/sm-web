@@ -43,7 +43,7 @@ export default function Expertise({}: Props) {
                     key={index}
                     className="flex items-center justify-start gap-2 text-sm"
                   >
-                    <MdOutlineCheck className="text-gray-500" size={16} />
+                    <MdOutlineCheck className="text-green-600" size={16} />
                     {listItem}
                   </li>
                 ))}
@@ -63,16 +63,14 @@ const content = [
     description:
       "Great products come from a great understanding of a user's pain or potential. I build strategy to find, and fix that pain.",
     list: [
-      "Product Strategy",
-      "User Research",
-      "Technical Strategy",
-      "Product Roadmap",
-      "Hiring Strategy",
-      "Product-Market Fit",
-      "Product Budgeting",
-      "Product Launch",
+      "Strategy",
+      "Research",
+      "Roadmaps",
+      "Hiring",
+      "Budgeting",
+      "GTM",
       "Fundraising",
-      "Investor Relations",
+      "Relations",
     ],
   },
   {
@@ -83,14 +81,12 @@ const content = [
     list: [
       "Wireframing",
       "Prototyping",
-      "User Testing",
-      "UI/UX Design",
+      "Testing",
+      "UI/UX",
       "Branding",
-      "Design Systems",
-      "Graphic Design",
-      "AI Imagery",
-      "Video Production",
-      "3D Design & Rendering",
+      "Systems",
+      "Graphics",
+      "Imagery",
     ],
   },
   {
@@ -99,22 +95,14 @@ const content = [
     description:
       "I train technical teams to build modern, exceptional products. Products that 'just work', built to scale, and not just satisfy, but delight users.",
     list: [
-      "Web Application Development",
-      "Mobile Application Development",
-      "API Development",
-      "Database Development",
-      "Cloud Infrastructure",
-      "Technical Architecture",
-      "Technical Documentation",
-      "Technical Team Hiring",
-      "Agile Process",
-      "DevOps Infrastructure",
+      "Web",
+      "Mobile",
+      "API",
+      "Database",
+      "Cloud",
+      "Architecture",
+      "Documentation",
+      "Hiring",
     ],
   },
-  // {
-  //   icon: "",
-  //   title: "Recruitment",
-  //   description:
-  //     "As a consultant, I provide guidance for teams lacking technical leadership.",
-  // },
-];
+]

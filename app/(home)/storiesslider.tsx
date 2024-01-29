@@ -132,7 +132,7 @@ const stories = [
       "Wattage, a hardware company, focused on building prototypes to validate technical feasibility, neglecting market interest and traction. Realization of this misdirection came too late, hindering the company's ability to support a beta launch and leading to its downfall.",
     logo: "",
     image: "",
-    url: "https://blog.ntrlab.com/5-stories-of-startup-failure/",
+    url: "https://medium.com/inside-wattage/well-we-failed-77e795e16ecf/",
     lesson:
       "Having a technical co-founder could have provided better guidance on balancing technical development with market validation and customer interest, avoiding misallocation of resources.",
     funding: "",
@@ -148,7 +148,7 @@ const stories = [
       "Quincy Apparel, started by founders without clothing manufacturing experience, faced operational problems due to hiring issues and complex production processes. The company struggled with product/operational fit, leading to its failure.",
     logo: "",
     image: "",
-    url: "https://create.vista.com/90-of-startups-fail-5-reasons-for-startup-slip-ups-and-how-to-avoid-them/",
+    url: "https://why-start-ups-fail.com/2023/02/07/case-study-quincy-apparel-part-three/",
     lesson:
       "A technical co-founder with experience in manufacturing could have streamlined production processes and made more informed operational decisions, potentially saving the company.",
     funding: "",

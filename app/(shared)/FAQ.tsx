@@ -24,7 +24,7 @@ export default function Faq({ faq }: Desire) {
             <Body className="mt-4">
               Have another question?
               <a
-                href="https://calendly.com/drifterapps/discovery30m"
+                href="https://calendly.com/startupmike/discovery"
                 target="_blank"
                 className="pl-2 transition duration-200 ease-in-out text-brand-base-a hover:text-white"
               >

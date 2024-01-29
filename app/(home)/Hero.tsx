@@ -12,7 +12,7 @@ type Props = {};
 export default function Hero(attention: Attention) {
   return (
     <Wrapper className="py-[10vh] bg-brand-base-h">
-      <InnerWrap className="flex-col items-center justify-center gap-4 pt-10 lg:flex min-h-[80vh]">
+      <InnerWrap className="flex-col items-center justify-center gap-4 lg:flex min-h-[80vh]">
         <Stinger {...attention} />
         <h1 className="text-center text-7xl text-tracking-tight lg:max-w-5xl font-title text-brand-base-f">
           Technical leadership for early-stage startups.
@@ -28,7 +28,7 @@ export default function Hero(attention: Attention) {
           </Button>
           <Button size="lg" variant="outline" className="gap-2 font-body">
             <a
-              href="https://calendly.com/drifterapps/discovery30m"
+              href="https://calendly.com/startupmike/discovery"
               className="flex items-center justify-center gap-2"
             >
               <BiLogoZoom size={25} className="text-gray-600" />

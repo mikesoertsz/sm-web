@@ -32,12 +32,11 @@ type Props = {
 
 export function Footer2({ content }: Footer) {
   const Wrapper = tw.footer`mx-auto w-full py-4 px-10 border-t border-gray-200 font-body`;
-  const InnerWrap = tw.div`mx-auto max-w-5xl w-full flex flex-col items-start justify-start sm:justify-between`;
   const Description = tw.span`block text-xs text-gray-500 dark:text-gray-500 sm:text-center mr-2`;
 
   return (
-    <Wrapper>
-      <div className="flex flex-row items-center justify-between w-full text-xs text-gray-500">
+    <Wrapper className="p-0 px-4 py-3 border border-t-2 border-slate-100">
+      <div className="grid w-full grid-cols-1 text-xs text-gray-500 md:grid-cols-3">
         <div className="flex flex-row items-center justify-start group ">
           {/* <Image
               src="/img/logo_drifter_icon.svg"
@@ -46,11 +45,13 @@ export function Footer2({ content }: Footer) {
               width={20}
               height={20}
             /> */}
-          <Description>{content.text.title}</Description>
+          <Description>
+            {content.text.title} &copy;{new Date().getFullYear()}.
+          </Description>
           <p>{content.text.trademark}</p>
         </div>
         <div>
-          <ul className="flex-row items-center justify-start hidden gap-1 md:flex">
+          <ul className="flex-row items-center justify-center hidden gap-1 md:flex">
             {content.links?.map((link, index) => (
               <li key={index}>
                 <a
@@ -62,6 +63,19 @@ export function Footer2({ content }: Footer) {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="flex items-center justify-end">
+          <p>
+            Built by{" "}
+            <a
+              href="http://www.drifter.agency"
+              className="font-semibold text-gray-900"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Drifter
+            </a>
+          </p>
         </div>
       </div>
     </Wrapper>

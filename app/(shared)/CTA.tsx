@@ -28,7 +28,7 @@ export default function CTA({}: Props) {
             </Link>
             <Link
               className="flex items-center justify-center gap-2 px-12 py-4 mt-8 font-medium text-black transition duration-200 ease-in-out bg-green-400 rounded-lg shadow-none text-md hover:bg-green-300 font-body"
-              href="https://calendly.com/drifterapps/discovery30m"
+              href="https://calendly.com/startupmike/discovery"
             >
               <BiLogoZoom size={25} />
               Book a consultation

@@ -45,7 +45,7 @@ export default function AboutMike({}: Props) {
           </Left>
           <Right>
             <div className="flex flex-col gap-4 lg:px-12">
-              <Preheading className=" font-light tracking-[0.3em] text-brand-base-f">
+              <Preheading className=" font-light tracking-[0.3em] text-brand-base-b">
                 background
               </Preheading>
               <ul className="flex flex-col gap-2 text-sm font-body">
@@ -87,22 +87,46 @@ export default function AboutMike({}: Props) {
                 </li>
               </ul>
               <Footer className="flex items-start justify-start mt-4 text-brand-base-c3 font-body">
-                <h4>Mike Soertsz</h4>
-                <p className="text-sm text-brand-base-c">
+                <h4 className="text-2xl text-brand-base-f">Mike Soertsz</h4>
+                <p className="text-sm text-brand-base-d">
                   Fractional CTO / Full-Stack Developer / Investor
                 </p>
                 <ul className="flex gap-2 mt-6 text-gray-500 ">
                   <li>
-                    <FaLinkedinIn className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                    <a
+                      href="https://www.linkedin.com/in/mikesoertsz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedinIn className="text-gray-400 transition duration-200 ease-in-out hover:text-[#0A66C2]" />
+                    </a>
                   </li>
                   <li>
-                    <IoLogoTwitter className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                    <a
+                      href="https://twitter.com/mikesoertsz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <IoLogoTwitter className="text-gray-400 transition duration-200 ease-in-out hover:text-[#1DA1F2]" />
+                    </a>
                   </li>
-                  <li>
-                    <FaMediumM className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                  <li className="hidden">
+                    <a
+                      href="https://medium.com/@mikesoertsz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaMediumM className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                    </a>
                   </li>
-                  <li>
-                    <BsSubstack className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                  <li className="hidden">
+                    <a
+                      href="https://mikesoertsz.substack.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <BsSubstack className="text-gray-400 transition duration-200 ease-in-out hover:text-black" />
+                    </a>
                   </li>
                 </ul>
               </Footer>
