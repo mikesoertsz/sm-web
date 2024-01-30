@@ -1,7 +1,4 @@
-import Image from "next/image";
-import React from "react";
 import tw from "tailwind-styled-components";
-import { BiCircle } from "react-icons/bi";
 
 interface Footer {
   content: {

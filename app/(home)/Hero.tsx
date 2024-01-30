@@ -1,12 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { InnerWrap, Wrapper } from "@/lib/atoms";
-import Image from "next/image";
-import React from "react";
-import { BiLogoZoom } from "react-icons/bi";
-import tw from "tailwind-styled-components";
-import Stinger from "./Stinger";
 import { Attention } from "@/lib/types";
-import InfiniteScroll from "../(shared)/InfiniteScroll";
+import { BiLogoZoom } from "react-icons/bi";
+import Stinger from "./Stinger";
 
 type Props = {};
 

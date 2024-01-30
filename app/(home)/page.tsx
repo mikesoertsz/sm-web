@@ -14,7 +14,6 @@ import Agitation from "./Agitation";
 import IsThisYou from "./IsThisYou";
 import Pricing from "./Pricing";
 import Testimonial from "./Testimonial";
-import InfiniteScroll from "../(shared)/InfiniteScroll";
 
 export default function HomePage() {
   return (

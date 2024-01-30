@@ -44,7 +44,6 @@ export default function RootLayout({
           {children}
           <Toaster />
         </div>
-        {/* <FooterMain /> */}
         <Footer2 content={footer} />
       </body>
     </html>
