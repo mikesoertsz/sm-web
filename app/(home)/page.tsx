@@ -14,10 +14,11 @@ import Agitation from "./Agitation";
 import IsThisYou from "./IsThisYou";
 import Pricing from "./Pricing";
 import Testimonial from "./Testimonial";
+import InfiniteScroll from "../(shared)/InfiniteScroll";
 
 export default function HomePage() {
   return (
-    <main className="flex-grow min-h-screen ">
+    <main className="flex-grow min-h-screen">
       <Hero {...homepage.attention} />
       <Agitation />
       <IsThisYou />
@@ -26,7 +27,7 @@ export default function HomePage() {
       <Mission />
       <CaseStudy />
       <Approach />
-      {/* <Pricing /> */}
+      <Pricing />
       <Testimonial />
       <FAQ {...homepage.desire} />
       <CTA />

@@ -159,6 +159,10 @@ export default function QuizBot({}: Props) {
 
 const questions = [
   {
+    text: "You're a founder but need a technical co-founder to build product?",
+    score: 10,
+  },
+  {
     text: "You have an amazing idea but don't know the best way to build it?",
     score: 6,
   },

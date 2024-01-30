@@ -19,7 +19,7 @@ export default function CaseStudy({}: Props) {
           <Left>
             <div className="relative flex flex-col items-center justify-center w-full p-10 px-16 py-16 mx-auto text-center text-white">
               <Image
-                src="/img/roman.jpg"
+                src="/img/clients/roman.jpg"
                 alt="Hero Image"
                 width={60}
                 height={60}

@@ -6,13 +6,14 @@ import { BiLogoZoom } from "react-icons/bi";
 import tw from "tailwind-styled-components";
 import Stinger from "./Stinger";
 import { Attention } from "@/lib/types";
+import InfiniteScroll from "../(shared)/InfiniteScroll";
 
 type Props = {};
 
 export default function Hero(attention: Attention) {
   return (
     <Wrapper className="py-[10vh] bg-brand-base-h">
-      <InnerWrap className="flex-col items-center justify-center gap-4 lg:flex min-h-[80vh]">
+      <InnerWrap className="flex-col items-center justify-center gap-4 lg:flex min-h-[60vh]">
         <Stinger {...attention} />
         <h1 className="text-center text-7xl text-tracking-tight lg:max-w-5xl font-title text-brand-base-f">
           Technical leadership for early-stage startups.

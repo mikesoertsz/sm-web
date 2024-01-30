@@ -10,10 +10,12 @@ import {
 } from "@/lib/atoms";
 import { Badge } from "@/components/ui/badge";
 import { MdOutlineCheck } from "react-icons/md";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 type Props = {};
 
-const PriceCard = tw.div`relative flex flex-col items-start justify-start bg-white p-6 flex-col rounded-lg bg-gray-100 bg-brand-base-e rounded-xl last:border-2 border-yellow-500 last:bg-black last:text-black`;
+const PriceCard = tw.div`relative flex flex-col items-start justify-start bg-white p-6 flex-col rounded-lg rounded-xl last:border-2 border-yellow-500 text-black h-full`;
 
 export default function Pricing({}: Props) {
   return (
@@ -32,46 +34,6 @@ export default function Pricing({}: Props) {
           </Body>
         </div>
         <div className="grid grid-cols-1 gap-4 mt-16 md:grid-cols-3">
-          <PriceCard>
-            <h3 className="text-xl font-semibold text-gray-400">
-              Technical Co-Founder
-            </h3>
-            <p className="mt-1 text-base text-gray-300">
-              I&apos;m available for technical co-founder roles.
-            </p>
-            <div className="mt-4">
-              <span className="text-3xl font-bold text-white">
-                Equity/Salary
-              </span>
-              <span className="ml-1 text-base text-gray-500"></span>
-            </div>
-            <div className="flex mt-6 grow">
-              <ul>
-                <li className="flex items-center">
-                  <MdOutlineCheck className="text-gray-500" size={20} />
-                  Web Application Development
-                </li>
-                <li className="flex items-center">
-                  <MdOutlineCheck className="text-gray-500" size={20} />
-                  Technical Team Building
-                </li>
-                <li className="flex items-center">
-                  <MdOutlineCheck className="text-gray-500" size={20} />
-                  Agile Process
-                </li>
-                <li className="flex items-center">
-                  <MdOutlineCheck className="text-gray-500" size={20} />
-                  Infrastructure
-                </li>
-              </ul>
-            </div>
-            <button
-              type="button"
-              className="flex items-center justify-center w-full py-4 mt-8 font-medium text-black bg-yellow-500 rounded-lg hover:bg-blue-600"
-            >
-              Book an Inquiry Call
-            </button>
-          </PriceCard>
           {prices.map((item, index) => (
             <PriceCard key={index}>
               {item.popular && (
@@ -79,37 +41,46 @@ export default function Pricing({}: Props) {
                   Popular
                 </Badge>
               )}
-              <h3 className="text-xl text-gray-200">{item.name}</h3>
-              <p className="mt-1 text-sm text-gray-300">{item.description}</p>
-              <div className="mt-8">
-                <span className="mr-2 text-3xl text-gray-600 font-body">€</span>
-                {item.popular && (
-                  <span className="text-5xl font-bold text-white">
-                    {item.price}
-                  </span>
-                )}
-                {!item.popular && (
-                  <span className="text-5xl font-bold text-gray-200">
-                    {item.price}
-                  </span>
-                )}
-                <span className="ml-1 text-base text-gray-500">
-                  /{item.duration}
+              <div className="flex flex-col items-center justify-center w-full mt-2">
+                <h3 className="text-2xl font-bold">{item.name}</h3>
+                <p className="h-3 mt-1 text-xs text-gray-500 font-body">
+                  {item.description}
+                </p>
+                <div className="mt-8">
+                  {item.price === 0 ? (
+                    <span className="text-5xl font-bold ">Free</span>
+                  ) : (
+                    <>
+                      <span className="mr-2 text-3xl text-gray-600 font-body">
+                        €
+                      </span>
+                      <span className="text-5xl font-bold ">
+                        {item.price.toLocaleString("en-US")}
+                      </span>
+                    </>
+                  )}
+                </div>
+                <span className="mt-1 ml-1 text-xs text-gray-400 font-body">
+                  {item.duration}
                 </span>
               </div>
-              <div className="mt-6 grow">
-                <ul className="px-8 text-sm font-body">
+              <div className="flex flex-col w-full h-[260px] p-6 mt-6 text-sm border rounded-lg grow font-body">
+                <p className="mb-3 font-medium">Deliverables:</p>
+                <ul className="grid w-full grid-cols-1 gap-x-4">
                   {item.deliverables.map((deliverable, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <MdOutlineCheck className="text-gray-500" size={20} />
+                    <li key={idx} className="flex items-center w-full gap-2">
+                      <MdOutlineCheck className="text-green-600" size={15} />
                       {deliverable}
                     </li>
                   ))}
                 </ul>
               </div>
+              <div className="flex items-center justify-center w-full h-2 my-2 mt-6 text-xs text-gray-500 transition duration-200 ease-in-out font-body hover:text-black">
+                <Link href={item.buttonlink}>{item.buttontext}</Link>
+              </div>
               <button
                 type="button"
-                className="flex items-center justify-center w-full py-4 mt-8 text-xl font-medium text-black bg-yellow-500 rounded-lg hover:bg-brand-base-h font-body"
+                className="flex items-center justify-center w-full py-4 text-xl font-medium text-black bg-black rounded-lg last:bg-yellow-300 hover:bg-brand-base-h font-body"
               >
                 Book a call
               </button>
@@ -125,7 +96,7 @@ const prices = [
   {
     name: "MVP Development",
     price: 35000,
-    description: "Fixed price projects.",
+    description: "Fixed price projects to get your MVP built fast.",
     deliverables: [
       "Web Apps",
       "Mobile Apps",
@@ -137,24 +108,41 @@ const prices = [
       "Automation",
       "AI/ML",
     ],
-    duration: "- starts at",
-    buttontext: {},
-    buttonlink: {},
+    duration: "Starts at",
+    buttontext: "",
+    buttonlink: "",
+    popular: false,
+  },
+  {
+    name: "Discovery Call",
+    price: 0,
+    description: "A free consultation to discuss your project.",
+    deliverables: [
+      "Detailed video feedback (20m)",
+      "Project Quotation",
+      "Project Terms",
+    ],
+    duration: "1 hour",
+    buttontext: "",
+    buttonlink: "",
     popular: false,
   },
   {
     name: "Tech Audit",
-    price: 200,
-    description: "A technical audit consultation of your product or plan.",
+    price: 620,
+    description: "Package audit of your project or idea.",
     deliverables: [
-      "A technical roadmap",
-      "A product specification",
-      "A product backlog",
-      "Detailed video feedback (1hr)",
+      "Detailed Video Feedback (1h)",
+      "Product Roadmap",
+      "Competitor Analysis",
+      "Technical Specification",
+      "Timeline (Gannt)",
+      "Budgeting",
+      "Product Backlog",
     ],
-    duration: "- 1 hour",
-    buttontext: {},
-    buttonlink: {},
+    duration: "1 hour meet. 4-day delivery.",
+    buttontext: "What's in an Audit",
+    buttonlink: "/tech-audit",
     popular: true,
   },
 ];
