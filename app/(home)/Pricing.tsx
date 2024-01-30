@@ -1,21 +1,11 @@
-import React from "react";
-import tw from "tailwind-styled-components";
-import {
-  InnerWrap,
-  Preheading,
-  Wrapper,
-  Heading,
-  Body,
-  SubHeading,
-} from "@/lib/atoms";
-import { Badge } from "@/components/ui/badge";
-import { MdOutlineCheck } from "react-icons/md";
-import { Button } from "@/components/ui/button";
+import { Body, Heading, InnerWrap, Preheading, Wrapper } from "@/lib/atoms";
 import Link from "next/link";
+import { MdOutlineCheck } from "react-icons/md";
+import tw from "tailwind-styled-components";
 
 type Props = {};
 
-const PriceCard = tw.div`relative flex flex-col items-start justify-start bg-white p-6 flex-col rounded-lg rounded-xl last:border-4 border-yellow-500 text-black h-full`;
+const PriceCard = tw.div`relative flex flex-col items-start justify-start bg-white p-6 flex-col rounded-lg rounded-xl outline-4 last:outline outline-yellow-500 text-black h-full`;
 
 export default function Pricing({}: Props) {
   return (
@@ -75,17 +65,17 @@ export default function Pricing({}: Props) {
                   ))}
                 </ul>
               </div>
-              {/* <div className="flex items-center justify-center w-full h-2 my-2 mt-6 text-xs text-gray-500 transition duration-200 ease-in-out font-body hover:text-black">
+              <div className="items-center justify-center hidden w-full h-2 my-2 mt-6 text-xs text-gray-500 transition duration-200 ease-in-out font-body hover:text-black">
                 <Link href={item.buttonlink}>{item.buttontext}</Link>
-              </div> */}
-              <div className="flex items-center justify-center w-full">
+              </div>
+              <div className="flex items-center justify-end w-full ">
                 <a
                   href={item.buttonlink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center transition duration-300 ease-in-out justify-center w-full py-3 mt-4 text-md font-medium rounded-lg font-body ${
+                  className={`flex items-center transition duration-300 ease-in-out justify-center w-full py-3 mt-6 text-md font-medium rounded-lg font-body ${
                     item.popular
-                      ? "bg-yellow-300 text-black border border-yellow-400"
+                      ? "bg-yellow-300 text-black border border-yellow-300"
                       : "bg-white text-black border border-gray-300"
                   } hover:bg-black hover:text-white`}
                 >

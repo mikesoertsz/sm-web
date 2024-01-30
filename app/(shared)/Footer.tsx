@@ -43,7 +43,7 @@ export function Footer2({ content }: Footer) {
               height={20}
             /> */}
           <Description>
-            {content.text.title} &copy;{new Date().getFullYear()}.
+            {content.text.title}&copy;{new Date().getFullYear()}.
           </Description>
           <p>{content.text.trademark}</p>
         </div>

@@ -70,7 +70,7 @@ export const nav = {
 };
 export const footer = {
   text: {
-    title: "startupmike.com.",
+    title: "StartupMike",
     subtitle: "Feactional CTO based in Portugal",
     description: "A Drifter Apps project.",
     trademark: "All rights reserved.",

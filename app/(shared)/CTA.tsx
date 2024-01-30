@@ -21,12 +21,6 @@ export default function CTA({}: Props) {
           <Titles content={ctaContent} theme="dark" />
           <div className="flex gap-4 mt-4">
             <Link
-              className="items-center justify-center hidden gap-2 px-12 py-4 mt-8 font-medium text-black transition duration-200 ease-in-out bg-yellow-300 rounded-lg shadow-none text-md hover:bg-yellow-200 font-body"
-              href=""
-            >
-              Book a Tech Audit (€200)
-            </Link>
-            <Link
               className="flex items-center justify-center gap-2 px-12 py-4 mt-8 font-medium text-black transition duration-200 ease-in-out bg-yellow-300 rounded-lg shadow-none text-md hover:bg-white hover:text-black font-body"
               href="https://cal.com/startupmike/discovery-call"
             >

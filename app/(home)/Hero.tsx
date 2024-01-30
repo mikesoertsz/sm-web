@@ -3,6 +3,7 @@ import { InnerWrap, Wrapper } from "@/lib/atoms";
 import { Attention } from "@/lib/types";
 import { BiLogoZoom } from "react-icons/bi";
 import Stinger from "./Stinger";
+import Link from "next/link";
 
 type Props = {};
 
@@ -23,15 +24,13 @@ export default function Hero(attention: Attention) {
           <Button size="lg" className="hidden font-body">
             What is an fCTO?
           </Button>
-          <Button size="lg" variant="outline" className="gap-2 font-body">
-            <a
-              href="https://calendly.com/startupmike/discovery"
-              className="flex items-center justify-center gap-2"
-            >
-              <BiLogoZoom size={25} className="text-gray-600" />
-              Book a consultation
-            </a>
-          </Button>
+          <Link
+            className="flex items-center justify-center gap-2 px-12 py-4 mt-8 font-medium text-black transition duration-200 ease-in-out bg-yellow-300 rounded-lg shadow-none text-md hover:bg-black hover:text-white font-body"
+            href="https://cal.com/startupmike/discovery-call"
+          >
+            <BiLogoZoom size={25} />
+            Book a consultation
+          </Link>
         </div>
       </InnerWrap>
     </Wrapper>

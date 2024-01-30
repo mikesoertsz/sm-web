@@ -1,12 +1,12 @@
+import GoogleAnalytics from "@/components/Analytics";
+import { Toaster } from "@/components/ui/toaster";
+import { footer, nav } from "@/public/content/en";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import "./globals.css";
-import GoogleAnalytics from "@/components/Analytics";
+import { Footer2 } from "./(shared)/Footer";
 import Nav from "./(shared)/Nav";
-import { Toaster } from "@/components/ui/toaster";
-import { Footer2, FooterMain } from "./(shared)/Footer";
-import { footer, nav } from "@/public/content/en";
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
