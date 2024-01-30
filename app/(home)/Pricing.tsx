@@ -15,7 +15,7 @@ import Link from "next/link";
 
 type Props = {};
 
-const PriceCard = tw.div`relative flex flex-col items-start justify-start bg-white p-6 flex-col rounded-lg rounded-xl last:border-2 border-yellow-500 text-black h-full`;
+const PriceCard = tw.div`relative flex flex-col items-start justify-start bg-white p-6 flex-col rounded-lg rounded-xl last:border-4 border-yellow-500 text-black h-full`;
 
 export default function Pricing({}: Props) {
   return (
@@ -26,7 +26,7 @@ export default function Pricing({}: Props) {
             pricing
           </Preheading>
           <Heading className="max-w-4xl font-normal text-brand-base-h">
-            Let&apos;s launch something amazing!
+            Let&apos;s build something amazing!
           </Heading>
           <Body className="hidden">
             <span className="pr-2 text-lime-500">20% off</span>
@@ -37,9 +37,9 @@ export default function Pricing({}: Props) {
           {prices.map((item, index) => (
             <PriceCard key={index}>
               {item.popular && (
-                <Badge className="absolute items-center justify-center font-medium text-black bg-yellow-300 rounded-lg -top-3 hover:bg-yellow-200 cursor-normal">
+                <div className="absolute items-center justify-center px-2 py-1 text-xs font-medium text-black bg-yellow-300 rounded-sm shadow-none font-body top-2 right-2 cursor-normal">
                   Popular
-                </Badge>
+                </div>
               )}
               <div className="flex flex-col items-center justify-center w-full mt-2">
                 <h3 className="text-2xl font-bold">{item.name}</h3>
@@ -75,15 +75,23 @@ export default function Pricing({}: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="flex items-center justify-center w-full h-2 my-2 mt-6 text-xs text-gray-500 transition duration-200 ease-in-out font-body hover:text-black">
+              {/* <div className="flex items-center justify-center w-full h-2 my-2 mt-6 text-xs text-gray-500 transition duration-200 ease-in-out font-body hover:text-black">
                 <Link href={item.buttonlink}>{item.buttontext}</Link>
+              </div> */}
+              <div className="flex items-center justify-center w-full">
+                <a
+                  href={item.buttonlink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center transition duration-300 ease-in-out justify-center w-full py-3 mt-4 text-md font-medium rounded-lg font-body ${
+                    item.popular
+                      ? "bg-yellow-300 text-black border border-yellow-400"
+                      : "bg-white text-black border border-gray-300"
+                  } hover:bg-black hover:text-white`}
+                >
+                  {item.buttontext}
+                </a>
               </div>
-              <button
-                type="button"
-                className="flex items-center justify-center w-full py-4 text-xl font-medium text-black bg-black rounded-lg last:bg-yellow-300 hover:bg-brand-base-h font-body"
-              >
-                Book a call
-              </button>
             </PriceCard>
           ))}
         </div>
@@ -109,8 +117,8 @@ const prices = [
       "AI/ML",
     ],
     duration: "Starts at",
-    buttontext: "",
-    buttonlink: "",
+    buttontext: "Scope your project",
+    buttonlink: "https://cal.com/startupmike/mvp-discovery-call",
     popular: false,
   },
   {
@@ -122,27 +130,29 @@ const prices = [
       "Project Quotation",
       "Project Terms",
     ],
-    duration: "1 hour",
-    buttontext: "",
-    buttonlink: "",
+    duration: "25m",
+    buttontext: "Book your free call",
+    buttonlink: "https://cal.com/startupmike/discovery-call",
     popular: false,
   },
   {
     name: "Tech Audit",
-    price: 620,
+    price: 629,
     description: "Package audit of your project or idea.",
     deliverables: [
       "Detailed Video Feedback (1h)",
       "Product Roadmap",
       "Competitor Analysis",
+      "Persona Analysis",
+      "Market Validation",
       "Technical Specification",
       "Timeline (Gannt)",
       "Budgeting",
-      "Product Backlog",
+      "Other Agreed Deliverables",
     ],
-    duration: "1 hour meet. 4-day delivery.",
-    buttontext: "What's in an Audit",
-    buttonlink: "/tech-audit",
+    duration: "1 hour sprint. 4-day delivery.",
+    buttontext: "Order Tech Audit (€629)",
+    buttonlink: "https://cal.com/startupmike/tech-audit",
     popular: true,
   },
 ];

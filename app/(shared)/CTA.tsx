@@ -27,8 +27,8 @@ export default function CTA({}: Props) {
               Book a Tech Audit (€200)
             </Link>
             <Link
-              className="flex items-center justify-center gap-2 px-12 py-4 mt-8 font-medium text-black transition duration-200 ease-in-out bg-green-400 rounded-lg shadow-none text-md hover:bg-green-300 font-body"
-              href="https://calendly.com/startupmike/discovery"
+              className="flex items-center justify-center gap-2 px-12 py-4 mt-8 font-medium text-black transition duration-200 ease-in-out bg-yellow-300 rounded-lg shadow-none text-md hover:bg-white hover:text-black font-body"
+              href="https://cal.com/startupmike/discovery-call"
             >
               <BiLogoZoom size={25} />
               Book a consultation
