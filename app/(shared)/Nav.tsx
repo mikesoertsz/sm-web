@@ -58,13 +58,23 @@ export default function Nav({ content }: Props) {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-        <h4 className="pl-4 text-xl font-medium">
-          <span className="font-medium tracking-tighter text-brand-base-i">
-            startup
-          </span>
-          <span className="font-title">mike</span>
-          <span className="text-xl text-red-500">.</span>
-        </h4>
+        <div className="flex items-center justify-center gap-4 pl-4 text-xl font-medium">
+          <Link href="/">
+            <Image
+              src="/img/startupmike_icon_small.svg"
+              width={35}
+              height={35}
+              alt="Logo"
+            />
+          </Link>
+          <h1 className="flex items-center justify-center">
+            <span className="font-medium tracking-tighter text-brand-base-i">
+              startup
+            </span>
+            <span className="font-title">mike</span>
+            <span className="text-xl text-red-500">.</span>
+          </h1>
+        </div>
       </Left>
       <Mid></Mid>
       <Right>
