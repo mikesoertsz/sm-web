@@ -12,7 +12,7 @@ const VideoWrap = tw.div`aspect-video rounded-3xl overflow-hidden w-full flex bg
 export default function page({}: Props) {
   return (
     <main className="flex fillscreen">
-      <Wrapper className="bg-brand-base-c2 text-brand-base-a font-body">
+      <Wrapper className="text-center bg-brand-base-c2 text-brand-base-a font-body">
         <InnerWrap>
           <div className="flex flex-col items-center justify-center mb-8">
             <h1 className="mb-2 text-3xl font-title text-brand-base-h">
@@ -26,7 +26,7 @@ export default function page({}: Props) {
           <Tabs defaultValue="account" className="w-full mt-12">
             <TabsList className="bg-brand-base-f">
               <TabsTrigger value="account">1. Proposal</TabsTrigger>
-              {/* <TabsTrigger value="password">2. Feedback</TabsTrigger> */}
+              <TabsTrigger value="pastwork">2. Past Work</TabsTrigger>
             </TabsList>
             <TabsContent value="account" className="w-full">
               <VideoWrap>
@@ -39,17 +39,20 @@ export default function page({}: Props) {
                 ></iframe>
               </VideoWrap>
             </TabsContent>
-            {/* <TabsContent value="password">
+            <TabsContent value="pastwork">
               <VideoWrap>
                 <iframe
-                  src="https://player.vimeo.com/video/919700620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  src="https://www.youtube.com/embed/eHXM0NBQV28?si=AP9nI7AzMULn_utF"
                   width="100%"
                   height="100%"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                   title="ContextQA_Roast"
                 ></iframe>
               </VideoWrap>
-            </TabsContent> */}
+              <p className="mt-3">
+                Video is still processing, higher resolutions will pop up later.
+              </p>
+            </TabsContent>
           </Tabs>
           <div className="flex flex-col items-center justify-center flex-grow mt-8 text-xs text-brand-base-a">
             <p>
