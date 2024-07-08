@@ -594,8 +594,13 @@ export const homepage = {
       },
     },
     stinger: {
-      badge: "Jan 2024",
-      heading: "20% off all projects in Q1-24   🎉",
+      badge: new Date().toLocaleString("default", {
+        month: "short",
+        year: "numeric",
+      }),
+      heading: `20% off all projects in Q${Math.ceil(
+        (new Date().getMonth() + 1) / 3
+      )}-${new Date().getFullYear()}   🎉`,
       url: "/booking",
     },
   },

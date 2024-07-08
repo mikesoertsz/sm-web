@@ -32,19 +32,23 @@ export default function Pricing({}: Props) {
                 </div>
               )}
               <div className="flex flex-col items-center justify-center w-full mt-2">
-                <h3 className="text-2xl font-bold">{item.name}</h3>
-                <p className="h-3 mt-1 text-xs text-gray-500 font-body">
+                <h3 className="text-3xl text-center text-tracking-tight font-title text-brand-base-f">
+                  {item.name}
+                </h3>
+                <p className="h-3 mt-1 text-xs text-gray-500 anti-aliased font-body">
                   {item.description}
                 </p>
                 <div className="mt-8">
                   {item.price === 0 ? (
-                    <span className="text-5xl font-bold ">Free</span>
+                    <span className="text-5xl font-semibold font-body">
+                      Free
+                    </span>
                   ) : (
                     <>
                       <span className="mr-2 text-3xl text-gray-600 font-body">
                         €
                       </span>
-                      <span className="text-5xl font-bold ">
+                      <span className="text-5xl font-semibold tracking-tighter font-body">
                         {item.price.toLocaleString("en-US")}
                       </span>
                     </>
