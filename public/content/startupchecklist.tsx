@@ -1,0 +1,50 @@
+export const startupchecklist = {
+  admin: [
+    {
+      index: 1,
+      title: "",
+      description: "",
+      subtasks: [],
+      priority: 0,
+      tools: [],
+      category: "admin",
+    },
+  ],
+  strategy: {
+    ideation: [],
+    validation: [],
+    planning: [],
+    branding: [],
+  },
+  product: {
+    prototyping: [],
+    development: [],
+    testing: [],
+    iteration: [],
+  },
+  operations: {
+    infrastructure: [],
+    tooling: [],
+    documentation: [],
+    deployment: [],
+    security: [],
+    compliance: [],
+  },
+  team: {
+    hiring: [],
+    culture: [],
+    onboarding: [],
+    collaboration: [],
+  },
+  business: {
+    fundraising: [],
+    marketing: [],
+    sales: [],
+    support: [],
+    metrics: [],
+    scaling: [],
+    partnerships: [],
+    legal: [],
+    expansion: [],
+  },
+};

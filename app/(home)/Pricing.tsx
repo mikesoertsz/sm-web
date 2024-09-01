@@ -48,7 +48,7 @@ export default function Pricing({}: Props) {
                       <span className="mr-2 text-3xl text-gray-600 font-body">
                         €
                       </span>
-                      <span className="text-5xl font-semibold tracking-tighter font-body">
+                      <span className="text-5xl font-semibold tracking-tighter font-body">ifter
                         {item.price.toLocaleString("en-US")}
                       </span>
                     </>
