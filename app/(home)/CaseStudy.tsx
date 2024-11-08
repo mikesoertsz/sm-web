@@ -14,7 +14,7 @@ export default function CaseStudy({}: Props) {
   return (
     <Wrapper>
       <InnerWrap className="flex flex-col items-center justify-center gap-4">
-        <Heading className="">Case Study</Heading>
+        <Heading className="">Happy Clients</Heading>
         <CaseStudyWrap>
           <Left>
             <div className="relative flex flex-col items-center justify-center w-full p-10 px-16 py-16 mx-auto text-center text-white">

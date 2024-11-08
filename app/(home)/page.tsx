@@ -14,11 +14,13 @@ import Agitation from "./Agitation";
 import IsThisYou from "./IsThisYou";
 import Pricing from "./Pricing";
 import Testimonial from "./Testimonial";
+import AttentionWhatIDo from "./attention-whatido";
 
 export default function HomePage() {
   return (
     <main className="flex-grow min-h-screen">
       <Hero {...homepage.attention} />
+      <AttentionWhatIDo />
       <Agitation />
       <IsThisYou />
       <AboutMike />

@@ -33,7 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="subpixel-antialiased scroll-smooth snap-y snap-mandatory"
+    >
       <GoogleAnalytics GA_MEASUREMENT_ID="G-WPD87GRL8C" />
       <GoogleAnalytics GA_MEASUREMENT_ID="G-TEL3Q2X5H8" />
       <body

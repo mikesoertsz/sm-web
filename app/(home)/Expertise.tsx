@@ -12,11 +12,6 @@ import tw from "tailwind-styled-components";
 
 type Props = {};
 
-const GridWrap = tw.div`grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3 pt-4 h-full`;
-const Column = tw.div`flex font-body w-full bg-white p-8 md:p-16 flex-col bg-gray-50 aspect-square grow`;
-const ColumnTitle = tw.h2`my-1 text-lg font-medium tracking-tight text-black`;
-const ColumnDescription = tw.h4`text-black text-sm h-full flex-grow`;
-
 export default function Expertise({}: Props) {
   return (
     <Wrapper className="bg-brand-base-h">
@@ -26,16 +21,22 @@ export default function Expertise({}: Props) {
             what i do
           </Preheading>
           <Heading className="max-w-4xl">Expertise</Heading>
-          <SubHeading className="mb-4 text-2xl text-brand-base-e">
-            I help non-technical teams build great products that people love.
+          <SubHeading className="mb-2 text-xl text-brand-base-e">
+            Helping non-technical founders build great products that people
+            love.
           </SubHeading>
         </div>
-        <GridWrap>
+        <ul className="grid h-[400px] grid-cols-1 gap-4 pt-4 md:grid-cols-2 lg:grid-cols-4">
           {content.map((item, index) => (
-            <Column key={index}>
-              <div className="">
-                <ColumnTitle>{item.title}</ColumnTitle>
-                <ColumnDescription>{item.description}</ColumnDescription>
+            <li
+              key={index}
+              className="flex flex-col items-start justify-between w-full h-full p-6 bg-white font-body md:p-8 aspect-square"
+            >
+              <div className="flex flex-col h-full">
+                <h2 className="my-1 text-lg font-medium tracking-tight text-black">
+                  {item.title}
+                </h2>
+                <h4 className="text-sm text-black">{item.description}</h4>
               </div>
               <ul className="flex flex-col mt-6 grow">
                 {item.list.map((listItem, index) => (
@@ -48,9 +49,9 @@ export default function Expertise({}: Props) {
                   </li>
                 ))}
               </ul>
-            </Column>
+            </li>
           ))}
-        </GridWrap>
+        </ul>
       </InnerWrap>
     </Wrapper>
   );
@@ -105,4 +106,20 @@ const content = [
       "Hiring",
     ],
   },
-]
+  {
+    icon: "",
+    title: "Fundraising",
+    description:
+      "I help founders raise capital from VCs, angels, and family offices.",
+    list: [
+      "Pitch Decks",
+      "Automated Outreach",
+      "Lead Generation",
+      "Pitch Meetings",
+      "Investor Relations",
+      "Term Sheets",
+      "Due Diligence",
+      "Closing Deals",
+    ],
+  },
+];

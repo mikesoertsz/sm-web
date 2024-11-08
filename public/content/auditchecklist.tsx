@@ -2,47 +2,124 @@ export const auditchecklist = {
   strategy: {
     planning: [
       {
-        title: "Development Practices Evaluation Report",
-        description: "Detailed analysis of current development practices.",
-      },
-      {
-        title: "Team Efficiency Improvement Plan",
-        description: "Actionable recommendations to boost team productivity.",
-      },
-      {
-        title: "Technical Strengths and USP Document",
+        title: "Product Roadmap",
         description:
-          "Identification of key technical strengths and unique selling points.",
+          "A strategic plan outlining the vision, direction, and progress of the product over time.",
       },
       {
-        title: "Investor Technical Documentation",
+        title: "Market Research Report",
+        description:
+          "An analysis of market trends, customer needs, and competitive landscape.",
+      },
+      {
+        title: "User Personas",
+        description:
+          "Detailed profiles representing key segments of the product's target audience.",
+      },
+      {
+        title: "MVP Feature List",
+        description:
+          "A prioritized list of features to be included in the Minimum Viable Product.",
+      },
+      {
+        title: "Go-to-Market Strategy",
+        description:
+          "A plan for how the product will be launched and promoted in the market.",
+      },
+      {
+        title: "SWOT Analysis",
+        description:
+          "An assessment of the product's strengths, weaknesses, opportunities, and threats.",
+      },
+      {
+        title: "Product Requirements Document",
+        description:
+          "A comprehensive document detailing the functional and non-functional requirements of the product.",
+      },
+      {
+        title: "Competitive Analysis",
+        description:
+          "An evaluation of the product's competitors and their strengths and weaknesses.",
+      },
+      {
+        title: "Customer Journey Map",
+        description:
+          "A visual representation of the customer's experience with the product from start to finish.",
+      },
+      {
+        title: "Launch Plan",
+        description:
+          "A detailed plan for the activities and timelines leading up to the product launch.",
+      },
+      {
+        title: "Technical Documentation",
         description:
           "Comprehensive technical documentation for potential investors.",
       },
     ],
     hiring: [
       {
-        title: "UI Design Assessment Report",
-        description: "Evaluation of user interface design and consistency.",
+        title: "Hiring Strategy Document",
+        description:
+          "Comprehensive strategy for hiring talent at the startup's inception.",
       },
       {
-        title: "User Flow Analysis",
-        description: "Detailed analysis of user flows and navigation.",
+        title: "Engineering Payroll Budget",
+        description:
+          "Detailed budget plan for engineering payroll to mitigate hiring costs.",
       },
       {
-        title: "User Experience Improvement Plan",
-        description: "Recommendations for enhancing overall user experience.",
+        title: "Job Descriptions",
+        description:
+          "Well-defined job descriptions for key roles in the startup.",
+      },
+      {
+        title: "Candidate Evaluation Criteria",
+        description:
+          "Criteria for evaluating potential candidates to ensure quality hires.",
+      },
+      {
+        title: "Onboarding Plan",
+        description: "Structured plan for onboarding new hires efficiently.",
+      },
+      {
+        title: "Technical Interview Process",
+        description:
+          "Detailed process for conducting technical interviews to assess candidate skills.",
+      },
+      {
+        title: "Hiring Process Overview",
+        description:
+          "Comprehensive overview of the entire hiring process from application to offer.",
       },
     ],
     fundraising: [
       {
-        title: "Marketing Tools Review",
+        title: "Fundraising Campaign Plan",
         description:
-          "In-depth review of current marketing tools and integrations.",
+          "Detailed plan for executing a successful fundraising campaign.",
       },
       {
-        title: "Marketing Automation Optimization Plan",
-        description: "Suggestions for optimizing marketing automation.",
+        title: "Fundraising Deck",
+        description: "Comprehensive deck to present to potential investors.",
+      },
+      {
+        title: "Investor Relations Strategy",
+        description: "Plan for managing and improving investor relations.",
+      },
+      {
+        title: "Investor Landing Page",
+        description:
+          "Design and content plan for an effective investor landing page.",
+      },
+      {
+        title: "Automated Email Funnels for Investor Outreach",
+        description:
+          "Automated email campaigns to reach out to potential investors.",
+      },
+      {
+        title: "Investor Pitch Preparation",
+        description: "Guidance and preparation for pitching to investors.",
       },
     ],
   },
