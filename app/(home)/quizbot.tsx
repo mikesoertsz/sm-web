@@ -97,7 +97,7 @@ export default function QuizBot({}: Props) {
         <div className="flex flex-col items-center text-center">
           <PiMaskSadDuotone size={100} className="mb-1 text-brand-base-c3" />
           <h1>No more questions!</h1>
-          <p className="text-sm font-light font-body text-brand-base-i">
+          <p className="text-sm font-light font-body text-brand-base-c3">
             We might not be the best match after all.
           </p>
         </div>
