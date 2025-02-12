@@ -23,7 +23,7 @@ export default function Hero(attention: Attention) {
     <Wrapper className="py-[5vh] bg-brand-base-h">
       <InnerWrap className="flex-col items-center justify-center gap-4 lg:flex min-h-[60vh]">
         <div className="flex flex-col items-center justify-center">
-          <Stinger {...attention} />
+          {/* <Stinger {...attention} /> */}
           <h1 className="text-center text-7xl text-tracking-tight lg:max-w-5xl font-title text-brand-base-f">
             {hero.heading}
           </h1>
