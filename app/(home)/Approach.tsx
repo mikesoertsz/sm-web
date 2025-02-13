@@ -26,7 +26,7 @@ export default function Approach({}: Props) {
           {serviceFeatures.map((item, index) => (
             <div
               key={index}
-              className="flex items-start justify-start gap-4 my-4 font-body"
+              className="flex flex-col items-start justify-start gap-4 my-4 font-body"
             >
               <div className="w-[70px] h-full grow text-brand-base-i">
                 {(index + 1).toString().padStart(2, "0")}
@@ -55,9 +55,8 @@ const serviceFeatures = [
     content: (
       <p>
         <span className="font-medium text-brand-base-c">Time in market.</span>{" "}
-        The only way to figure out what the market really needs (and is willing
-        to pay for) is to launch, test and ierate based on as much data and as
-        few assumptions.
+        The only way to know what the market needs (and is willing to pay for)
+        is to launch, test & iterate based on more data and fewer assumptions.
       </p>
     ),
   },
@@ -65,7 +64,7 @@ const serviceFeatures = [
     content: (
       <p>
         <span className="font-medium text-brand-base-c">Transparency.</span>{" "}
-        Work in pprogress is open at all points of the process. Every file,
+        Work in progress is open at all points of the process. Every file,
         design, sheet and line of code should be shared early and often. A rule
         with anyone I hire.
       </p>
