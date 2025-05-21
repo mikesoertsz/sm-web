@@ -26,6 +26,11 @@ export default function Pricing({}: Props) {
         <div className="grid grid-cols-1 gap-4 mt-16 md:grid-cols-3">
           {prices.map((item, index) => (
             <PriceCard key={index}>
+              {index === 0 && (
+                <div className="absolute px-2 py-1 text-xs font-medium text-white bg-red-500 rounded-sm shadow-none top-2 right-2 font-body">
+                  Not available for new clients
+                </div>
+              )}
               {item.popular && (
                 <div className="absolute items-center justify-center px-2 py-1 text-xs font-medium text-black bg-yellow-300 rounded-sm shadow-none font-body top-2 right-2 cursor-normal">
                   Popular
@@ -81,7 +86,9 @@ export default function Pricing({}: Props) {
                     item.popular
                       ? "bg-yellow-300 text-black border border-yellow-300"
                       : "bg-white text-black border border-gray-300"
-                  } hover:bg-black hover:text-white`}
+                  } hover:bg-black hover:text-white ${
+                    index === 0 ? "pointer-events-none opacity-50" : ""
+                  }`}
                 >
                   {item.buttontext}
                 </a>
